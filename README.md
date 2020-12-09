@@ -2,7 +2,7 @@ calculoMental
 
 Simple juego para practicar cálculo mental, sumas y multiplicaciones.
 
-Uso: calculoMental [operacion|ayuda] [opciones] <br>
+Uso: java -jar dist/calculoMental.jar [operacion|ayuda] [opciones] <br>
 Operacion: <br>
 	s: Suma<br>
 		Opciones: <br>
