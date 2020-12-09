@@ -1,6 +1,8 @@
-package calculomental;
+package operacion;
 
+import calculomental.CalculoMental;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  *
@@ -20,6 +22,23 @@ public class Suma {
     public Suma() {
         this.cifras = new int[100];
         this.rellenarCifras();
+    }
+
+    public void ejecutar() {
+        int respuesta;
+        Scanner reader = new Scanner(System.in);
+        long tiempo1 = System.currentTimeMillis() / 1000;
+        System.out.println(this + "\n");
+        respuesta = reader.nextInt();
+        long tiempo2 = System.currentTimeMillis() / 1000;
+        if (respuesta == this.getSolucion()) {
+            System.out.println("Correcto");
+            System.out.println("tiempo: " + (tiempo2 - tiempo1));
+        } else {
+            System.out.println("Incorrecto");
+            System.out.println("Solucion " + this.getSolucion());
+            System.out.println("tiempo: " + (tiempo2 - tiempo1));
+        }
     }
 
     private void rellenarCifras() {
